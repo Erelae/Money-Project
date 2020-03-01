@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CurrencyChooserActivity">
+
+    <Button
+        android:id="@+id/usaButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="Dollars (USA)"
+        app:layout_constraintBottom_toBottomOf="@+id/usaFlagImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/usaFlagImageView"
+        app:layout_constraintTop_toTopOf="@+id/usaFlagImageView" />
+
+    <Button
+        android:id="@+id/ukButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="Pounds (UK)"
+        app:layout_constraintBottom_toBottomOf="@+id/ukFlagImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ukFlagImageView"
+        app:layout_constraintTop_toTopOf="@+id/ukFlagImageView" />
+
+    <Button
+        android:id="@+id/japanButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="Yen (Japan)"
+        app:layout_constraintBottom_toBottomOf="@+id/japanFlagImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/japanFlagImageView"
+        app:layout_constraintTop_toTopOf="@+id/japanFlagImageView" />
+
+    <ImageView
+        android:id="@+id/usaFlagImageView"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flag_usa" />
+
+    <ImageView
+        android:id="@+id/japanFlagImageView"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="@+id/usaFlagImageView"
+        app:layout_constraintTop_toBottomOf="@+id/ukFlagImageView"
+        app:srcCompat="@drawable/flag_japan" />
+
+    <ImageView
+        android:id="@+id/ukFlagImageView"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="@+id/usaFlagImageView"
+        app:layout_constraintTop_toBottomOf="@+id/usaFlagImageView"
+        app:srcCompat="@drawable/flag_uk" />
+
+    <TextView
+        android:id="@+id/labelLastConversion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Last conversion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/lastConversionTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lastConversionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelLastConversion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/labelLastConversion"
+        tools:text="10 EUR = 9 USD" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
